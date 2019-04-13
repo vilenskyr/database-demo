@@ -12,3 +12,8 @@ INSERT INTO person
 	(ID, NAME, LOCATION, BIRTH_DATE)
 VALUES
 	(10003, 'Elmira', 'LA', sysdate());
+	
+INSERT INTO person
+	(ID, NAME, LOCATION, BIRTH_DATE)
+VALUES
+	(10004, 'Roman', 'LA', sysdate());

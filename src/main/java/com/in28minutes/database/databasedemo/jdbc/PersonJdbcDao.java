@@ -22,4 +22,21 @@ public class PersonJdbcDao {
 
 		return jdbcTemplate.query("SELECT * FROM person", new BeanPropertyRowMapper<Person>(Person.class));
 	}
+
+	public Person findById(int id) {
+
+		return jdbcTemplate.queryForObject("SELECT * FROM person WHERE id=?", new Object[] { id },
+				new BeanPropertyRowMapper<Person>(Person.class));
+	}
+
+	public List<Person> findByName(String name) {
+
+		return jdbcTemplate.query("SELECT * FROM person WHERE name=?", new Object[] { name },
+				new BeanPropertyRowMapper<Person>(Person.class));
+	}
+
+	public int deleteById(int id) {
+
+		return jdbcTemplate.update("DELETE FROM person WHERE id=?", new Object[] { id });
+	}
 }
