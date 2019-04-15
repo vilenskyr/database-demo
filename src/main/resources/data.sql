@@ -6,14 +6,9 @@ VALUES
 INSERT INTO person
 	(ID, NAME, LOCATION, BIRTH_DATE)
 VALUES
-	(10002, 'Elazar', 'New York', sysdate());
+	(10002, 'Mila', 'New York', sysdate());
 	
 INSERT INTO person
 	(ID, NAME, LOCATION, BIRTH_DATE)
 VALUES
 	(10003, 'Elmira', 'LA', sysdate());
-	
-INSERT INTO person
-	(ID, NAME, LOCATION, BIRTH_DATE)
-VALUES
-	(10004, 'Roman', 'LA', sysdate());
