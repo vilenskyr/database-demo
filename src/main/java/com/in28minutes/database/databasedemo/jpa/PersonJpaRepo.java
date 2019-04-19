@@ -1,7 +1,10 @@
 package com.in28minutes.database.databasedemo.jpa;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,5 +37,12 @@ public class PersonJpaRepo {
 
 		Person person = findById(id);
 		eManager.remove(person);
+	}
+
+	public List<Person> findAll() {
+
+		TypedQuery<Person> namedQuery = eManager.createNamedQuery("find_all_persons", Person.class);
+
+		return namedQuery.getResultList();
 	}
 }
